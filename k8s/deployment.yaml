@@ -1,7 +1,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  namespace: gof
+  namespace: git-ops
   name: demo-web-deployment
   labels:
     app: demo-web-deployment
