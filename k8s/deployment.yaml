@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: demo-web-deployment
+  labels:
+    app: demo-web-deployment
+spec:
+  replicas: 1
+  template:
+    metadata:
+      name: demo-web-deployment
+      labels:
+        app: demo-web-deployment
+    spec:
+      containers:
+        - name: demo-web-deployment
+          image: goffity/demo-gitops-web
+          imagePullPolicy: IfNotPresent
+      restartPolicy: Always
+  selector:
+    matchLabels:
+      app: demo-web-deployment
