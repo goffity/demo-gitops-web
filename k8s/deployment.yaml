@@ -15,6 +15,10 @@ spec:
       containers:
         - name: demo-web-deployment
           image: goffity/demo-gitops-web
+          resources:
+            requests:
+              memory: "32Mi"
+              cpu: "0.01"
           imagePullPolicy: IfNotPresent
       restartPolicy: Always
   selector:
