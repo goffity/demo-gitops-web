@@ -6,7 +6,7 @@ metadata:
   labels:
     app: demo-web-deployment
 spec:
-  replicas: 2
+  replicas: 4
   template:
     metadata:
       name: demo-web-deployment
