@@ -5,7 +5,7 @@ metadata:
   labels:
     app: demo-web-deployment
 spec:
-  replicas: 1
+  replicas: 2
   template:
     metadata:
       name: demo-web-deployment
@@ -19,6 +19,9 @@ spec:
             requests:
               memory: "32Mi"
               cpu: "0.01"
+            limits:
+              memory: "128Mi"
+              cpu: "0.1"
           imagePullPolicy: IfNotPresent
       restartPolicy: Always
   selector:
